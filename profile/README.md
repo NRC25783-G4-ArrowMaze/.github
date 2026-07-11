@@ -22,13 +22,34 @@ El proyecto consiste en diseñar e implementar un clon del juego Arrow Maze apli
 
 ## Estructura de Repositorios
 
-El proyecto se organiza en **dos repositorios independientes** dentro de esta organizacion, mas este repositorio especial de configuracion:
+El proyecto se organiza en **tres repositorios** dentro de esta organizacion, mas este repositorio especial de configuracion:
 
-| Repositorio | Descripcion |
-|---|---|
-| **Game (Cliente)** | Aplicacion movil que implementa las mecanicas del juego |
-| **Backend** | API REST que gestiona usuarios, puntuaciones, niveles y progreso |
-| **`.github`** (este repo) | Configuracion organizacional, automatizaciones CI/CD compartidas y perfil de la organizacion |
+| Repositorio | Tecnologia | Rol |
+|---|---|---|
+| [**arrowmaze-project-core**](https://github.com/NRC25783-G4-ArrowMaze/arrowmaze-project-core) | Markdown + Gherkin (BDD) | **Fuente unica de verdad**: especificaciones, decisiones arquitectonicas e historial de sesiones SDD |
+| [**arrowmaze-game**](https://github.com/NRC25783-G4-ArrowMaze/arrowmaze-game) | React 18 + TypeScript + Vite + Capacitor | **Cliente**: aplicacion movil que implementa las mecanicas del juego |
+| [**arrowmaze-backend**](https://github.com/NRC25783-G4-ArrowMaze/arrowmaze-backend) | Express.js + Node.js + TypeScript + PostgreSQL | **API REST**: gestiona usuarios, puntuaciones, niveles y progreso |
+| [**`.github`**](https://github.com/NRC25783-G4-ArrowMaze/.github) (este repo) | GitHub Actions | Configuracion organizacional, automatizaciones CI/CD compartidas y perfil de la organizacion |
+
+### Flujo Specification-Driven Development (SDD)
+
+Las especificaciones y decisiones de arquitectura se **centralizan en `arrowmaze-project-core`** antes de escribir codigo. El cliente y el backend **sincronizan sus specs** desde alli para implementarlas:
+
+```
+Cambios en specs/decisiones
+        ↓
+Actualizar features/*.feature + docs/ en project-core
+        ↓
+arrowmaze-game y arrowmaze-backend sincronizan e implementan
+```
+
+### Estado del proyecto
+
+Ambos repositorios de implementacion estan **cerrados y congelados en `v1.0.0`**:
+
+- 🔒 **arrowmaze-backend** — `v1.0.0` (2026-07-09)
+- 🔒 **arrowmaze-game** — `v1.0.0` (2026-07-11)
+- 📓 **arrowmaze-project-core** — bitácora histórica: registra *cómo* se llegó a la v1.0.0
 
 ---
 
@@ -216,7 +237,7 @@ El uso de herramientas de IA generativa esta **permitido y es bienvenido**, cond
 
 ## Fecha de Entrega
 
-**Viernes 03 de julio de 2026**
+**Lunes 13 de julio de 2026, 9:00 AM**
 
 ---
 

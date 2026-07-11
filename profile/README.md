@@ -45,10 +45,13 @@ arrowmaze-game y arrowmaze-backend sincronizan e implementan
 
 ### Estado del proyecto
 
-Ambos repositorios de implementacion estan **cerrados y congelados en `v1.0.0`**:
+Ambos repositorios de implementacion alcanzaron su release **`v1.0.0`**. Lo que queda **congelado**
+es su **documentacion en `arrowmaze-project-core`** hasta esa version: los repositorios en si **siguen
+vivos y evolucionan de forma independiente**, solo que sus specs/decisiones ya no se re-espejan en
+project-core a partir de v1.0.0.
 
-- 🔒 **arrowmaze-backend** — `v1.0.0` (2026-07-09)
-- 🔒 **arrowmaze-game** — `v1.0.0` (2026-07-11)
+- **arrowmaze-backend** — `v1.0.0` (2026-07-09) · documentacion congelada en project-core
+- **arrowmaze-game** — `v1.0.0` (2026-07-11) · documentacion congelada en project-core
 - 📓 **arrowmaze-project-core** — bitácora histórica: registra *cómo* se llegó a la v1.0.0
 
 ---
